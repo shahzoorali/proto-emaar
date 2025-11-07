@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, MapPin, Users, Trophy } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  Users,
+  Trophy,
+  Wind,
+  Droplet,
+  Umbrella,
+  Sun,
+} from "lucide-react";
 import { leaderboard } from "@/data/leaderboard";
 import { players } from "@/data/players";
 import { news } from "@/data/news";
@@ -11,6 +20,18 @@ import PlayerCard from "@/components/PlayerCard";
 import NewsCard from "@/components/NewsCard";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
+
+const currentConditions = {
+  temperature: "87°F",
+  condition: "Mostly Sunny",
+  wind: "11 MPH WNW",
+  windDetail: "Gusts up to 15 MPH",
+  humidity: "49%",
+  precipitation: "1%",
+  course: "Emaar Boulder Hills Golf Club",
+  location: "Hyderabad, India",
+  updated: "Updated 08:05 PM IST",
+};
 
 export default function Home() {
   const featuredNews = news.slice(0, 1)[0];
@@ -71,6 +92,70 @@ export default function Home() {
               >
                 Buy Tickets
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Conditions */}
+      <section className="section-shell bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="card-elevated bg-tour-navy-900 text-white overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-3">
+              <div className="lg:col-span-2 p-8 md:p-10 space-y-6">
+                <div className="flex items-center gap-3">
+                  <span className="headline-pill bg-white/10 text-white">Current Conditions</span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/60">
+                    {currentConditions.updated}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 text-sm text-white/85">
+                  <div className="space-y-2">
+                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Wind</p>
+                    <div className="flex items-center gap-3">
+                      <Wind className="h-5 w-5 text-tour-green" />
+                      <div>
+                        <p className="font-semibold text-white">{currentConditions.wind}</p>
+                        <p className="text-white/70 text-xs">{currentConditions.windDetail}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Humidity</p>
+                    <div className="flex items-center gap-3">
+                      <Droplet className="h-5 w-5 text-tour-green" />
+                      <p className="font-semibold text-white">{currentConditions.humidity}</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Precipitation</p>
+                    <div className="flex items-center gap-3">
+                      <Umbrella className="h-5 w-5 text-tour-green" />
+                      <p className="font-semibold text-white">{currentConditions.precipitation}</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Course</p>
+                    <p className="font-semibold text-white">{currentConditions.course}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-white/80 text-sm">
+                  <MapPin className="h-4 w-4 text-tour-green" />
+                  <span>{currentConditions.location}</span>
+                </div>
+              </div>
+
+              <div className="bg-tour-navy-800/70 backdrop-blur-sm px-10 py-12 flex flex-col items-center justify-center gap-4">
+                <Sun className="h-14 w-14 text-tour-gold" />
+                <p className="text-5xl font-heading tracking-[0.12em] text-white">
+                  {currentConditions.temperature}
+                </p>
+                <p className="uppercase tracking-[0.2em] text-sm text-white/70">
+                  {currentConditions.condition}
+                </p>
+              </div>
             </div>
           </div>
         </div>
