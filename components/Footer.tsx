@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* About */}
           <div>
-            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white/70">
+            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white">
               About
             </h3>
             <ul className="space-y-3 text-sm text-white/70">
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white/70">
+            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm text-white/70">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white/70">
+            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white">
               Contact
             </h3>
             <ul className="space-y-3 text-sm text-white/70">
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white/70">
+            <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-4 text-white">
               Follow Us
             </h3>
             <div className="flex gap-4">
@@ -117,7 +117,7 @@ export default function Footer() {
 
         {/* Partners */}
         <div className="mt-16 pt-10 border-t border-white/10">
-          <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-6 text-white/70">
+          <h3 className="font-heading text-sm tracking-[0.24em] uppercase mb-6 text-white">
             Official Partners
           </h3>
           <div className="flex flex-wrap gap-8 items-center opacity-80 text-sm">
