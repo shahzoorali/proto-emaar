@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emaar Boulder Hills National Tournament 2026
+
+A professional golf tournament website prototype inspired by PGA TOUR design, featuring tournament information, player profiles, leaderboard, ecommerce shop, and more.
+
+## Features
+
+- **Tournament Hub**: Homepage with hero section, leaderboard preview, featured players, news, and videos
+- **Leaderboard**: Live scoring with round-by-round breakdown
+- **Players**: Comprehensive player profiles with stats, bio, and recent results
+- **Schedule**: Tee times and pairings for all three rounds
+- **Course Guide**: Hole-by-hole guide with course statistics
+- **News**: Tournament news, player features, and course updates
+- **Ecommerce Shop**: Curated golf equipment and apparel catalog with mock checkout
+- **Registration**: Player registration form
+- **Tickets**: Ticket purchasing options
+- **Media Center**: Resources for media professionals
+
+## Tech Stack
+
+- **Next.js 16** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Radix UI** components for accessible UI
+- **Lucide React** for icons
+
+## Design Inspiration
+
+The website design is inspired by [PGA TOUR](https://www.pgatour.com/) with:
+- Clean, elegant layout
+- Professional color scheme (Navy #0a2540, Green #00a859)
+- Responsive design for all devices
+- Modern card-based components
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+├── app/                    # Next.js app directory
+│   ├── page.tsx           # Homepage
+│   ├── leaderboard/       # Leaderboard page
+│   ├── players/            # Players listing and detail pages
+│   ├── shop/              # Ecommerce shop pages
+│   ├── news/              # News listing and article pages
+│   ├── schedule/          # Tournament schedule
+│   ├── course/            # Course guide
+│   ├── tickets/           # Ticket purchasing
+│   ├── register/         # Player registration
+│   └── media/             # Media center
+├── components/            # Reusable React components
+├── data/                 # Mock data files
+└── public/               # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Mock Data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website includes comprehensive mock data:
+- **20 Indian professional golfers** with realistic names, stats, and images
+- **25 curated golf products** from major brands
+- **Tournament leaderboard** with round-by-round scores
+- **News articles** covering tournament updates
+- **Videos** linking to YouTube content
+- **Tee sheets** for all three rounds
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features in Detail
 
-## Deploy on Vercel
+### Player Profiles
+- Indian professional golfers (Handicap 0-18)
+- Player stats (scoring average, driving distance, GIR, putting)
+- Recent tournament results
+- Filterable by handicap range and search
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Ecommerce Shop
+- Curated product catalog (25 items)
+- Categories: Clubs, Golf Balls, Shoes, Apparel, Tech, Gear
+- Product detail pages with specifications
+- Mock checkout flow (no payment processing)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Leaderboard
+- Live scoring display
+- Round-by-round breakdown
+- Score to par calculations
+- Responsive table design
+
+## Notes
+
+- All images use Unsplash stock photos
+- Product data is curated from PGA TOUR Superstore structure
+- Checkout is a mock experience (no actual payment processing)
+- All player names are Indian names
+- Tournament dates: February 12-14, 2026
+
+## License
+
+This is a prototype project for demonstration purposes.

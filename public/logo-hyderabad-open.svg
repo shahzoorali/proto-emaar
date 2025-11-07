@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="32" fill="#0A2540"/>
+  <circle cx="100" cy="100" r="68" stroke="#00A859" stroke-width="10" fill="none"/>
+  <path d="M60 140L100 60L140 140H60Z" fill="#00A859" opacity="0.85"/>
+  <circle cx="100" cy="100" r="22" fill="#0A2540" stroke="#FFD166" stroke-width="6"/>
+  <text x="50%" y="178" text-anchor="middle" fill="#FFD166" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600">HYDERABAD OPEN</text>
+</svg>
+
