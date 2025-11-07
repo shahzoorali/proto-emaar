@@ -14,7 +14,8 @@ import { products } from "@/data/products";
 
 export default function Home() {
   const featuredNews = news.slice(0, 1)[0];
-  const recentNews = news.slice(1, 4);
+  const recentNews = news.slice(1, 5);
+  const newsroomUpdates = news.slice(5, 9);
   const topPlayers = players.slice(0, 6);
   const featuredProducts = products.slice(0, 4);
   const featuredVideos = videos.slice(0, 3);
@@ -32,41 +33,41 @@ export default function Home() {
             className="absolute top-1/2 left-1/2 w-[130%] h-[130%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a2540]/95 via-[#0a2540]/75 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">
-          <div className="text-white max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 h-full flex items-center">
+          <div className="text-white max-w-2xl space-y-6">
+            <h1 className="font-heading text-5xl md:text-6xl tracking-[0.12em] text-white drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)] leading-tight">
               Hyderabad Open 2026
               <br />
               Championship
             </h1>
-            <p className="text-xl md:text-2xl mb-6 text-gray-200">
-              India's Premier Professional Golf Championship
+            <p className="text-xl md:text-2xl text-white/90 drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] leading-relaxed">
+              India&apos;s Premier Professional Golf Championship
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-[#00a859]" />
-                <span>Feb 12-14, 2026</span>
+            <div className="flex flex-wrap gap-6">
+              <div className="flex items-center gap-2 text-white/90">
+                <Calendar className="w-5 h-5 text-tour-green" />
+                <span className="font-medium">Feb 12-14, 2026</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#00a859]" />
-                <span>Hyderabad, India</span>
+              <div className="flex items-center gap-2 text-white/90">
+                <MapPin className="w-5 h-5 text-tour-green" />
+                <span className="font-medium">Hyderabad, India</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-[#00a859]" />
-                <span>Professional Players</span>
+              <div className="flex items-center gap-2 text-white/90">
+                <Users className="w-5 h-5 text-tour-green" />
+                <span className="font-medium">Professional Players</span>
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/register"
-                className="bg-[#00a859] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#008a4a] transition"
+                className="inline-flex items-center rounded-full bg-tour-green px-8 py-3 font-heading tracking-[0.2em] text-xs uppercase text-white hover:bg-[#02c56f] transition shadow-lg"
               >
                 Register Now
               </Link>
               <Link
                 href="/tickets"
-                className="bg-white text-[#0a2540] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                className="inline-flex items-center rounded-full bg-white/95 backdrop-blur-sm px-8 py-3 font-heading tracking-[0.2em] text-xs uppercase text-tour-navy-900 hover:bg-white transition shadow-lg"
               >
                 Buy Tickets
               </Link>
@@ -76,38 +77,49 @@ export default function Home() {
       </section>
 
       {/* Tournament Highlights */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="section-shell bg-tour-cloud">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
               <Trophy className="w-12 h-12 text-[#00a859] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-[#0a2540] mb-2">₹50 Lakhs</h3>
-              <p className="text-gray-600">Prize Purse</p>
+              <h3 className="font-heading text-xl tracking-[0.2em] text-tour-navy-900 mb-2">
+                ₹50 Lakhs
+              </h3>
+              <p className="text-tour-muted uppercase tracking-[0.24em] text-xs">Prize Purse</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 text-[#00a859] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-[#0a2540] mb-2">60+ Players</h3>
-              <p className="text-gray-600">Professional Field</p>
+              <h3 className="font-heading text-xl tracking-[0.2em] text-tour-navy-900 mb-2">
+                60+ Players
+              </h3>
+              <p className="text-tour-muted uppercase tracking-[0.24em] text-xs">
+                Professional Field
+              </p>
             </div>
             <div className="text-center">
               <Calendar className="w-12 h-12 text-[#00a859] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-[#0a2540] mb-2">3 Days</h3>
-              <p className="text-gray-600">Championship Format</p>
+              <h3 className="font-heading text-xl tracking-[0.2em] text-tour-navy-900 mb-2">3 Days</h3>
+              <p className="text-tour-muted uppercase tracking-[0.24em] text-xs">
+                Championship Format
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Leaderboard Preview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540]">Leaderboard</h2>
+      <section className="section-shell bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
+            <div className="section-title">
+              <span className="headline-pill">Leaderboard</span>
+              <h2>Hyderabad Open Standings</h2>
+            </div>
             <Link
               href="/leaderboard"
-              className="text-[#00a859] font-semibold hover:underline"
+              className="inline-flex items-center rounded-full border border-tour-navy-900 px-5 py-2.5 font-heading tracking-[0.2em] text-xs uppercase hover:bg-tour-navy-900 hover:text-white transition"
             >
-              View Full Leaderboard →
+              View Full Leaderboard
             </Link>
           </div>
           <LeaderboardTable leaderboard={leaderboard} />
@@ -115,15 +127,18 @@ export default function Home() {
       </section>
 
       {/* Featured Players */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540]">Featured Players</h2>
+      <section className="section-shell bg-tour-cloud">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
+            <div className="section-title">
+              <span className="headline-pill">Player Spotlight</span>
+              <h2>Featured Professionals</h2>
+            </div>
             <Link
               href="/players"
-              className="text-[#00a859] font-semibold hover:underline"
+              className="inline-flex items-center rounded-full border border-tour-navy-900 px-5 py-2.5 font-heading tracking-[0.2em] text-xs uppercase hover:bg-tour-navy-900 hover:text-white transition"
             >
-              View All Players →
+              View All Players
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -135,9 +150,12 @@ export default function Home() {
       </section>
 
       {/* Course Spotlight */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mb-8">Course Spotlight</h2>
+      <section className="section-shell bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="section-title">
+            <span className="headline-pill">Course Spotlight</span>
+            <h2>Emaar Boulder Hills Golf Club</h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
@@ -148,10 +166,10 @@ export default function Home() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-[#0a2540] mb-4">
-                Emaar Boulder Hills Golf Club
-              </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-tour-muted uppercase tracking-[0.24em] text-xs mb-4">
+                Championship Venue
+              </p>
+              <p className="text-tour-text/80 mb-6 text-lg leading-8">
                 Nestled in the heart of Hyderabad, Emaar Boulder Hills Golf Club is one of India's
                 premier golf destinations. The championship course features 18 holes of challenging
                 yet playable golf, with stunning views and impeccable course conditions.
@@ -176,7 +194,7 @@ export default function Home() {
               </div>
               <Link
                 href="/course"
-                className="inline-block bg-[#0a2540] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#00a859] transition"
+                className="inline-flex items-center rounded-full bg-tour-navy-900 px-6 py-3 font-heading tracking-[0.2em] text-xs uppercase hover:bg-tour-green transition"
               >
                 Explore Course
               </Link>
@@ -186,34 +204,81 @@ export default function Home() {
       </section>
 
       {/* News Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540]">Latest News</h2>
+      <section className="section-shell bg-tour-cloud">
+        <div className="max-w-7xl mx-auto px-6 space-y-10">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="section-title">
+              <span className="headline-pill">Newsroom</span>
+              <h2>Latest Headlines</h2>
+            </div>
             <Link
               href="/news"
-              className="text-[#00a859] font-semibold hover:underline"
+              className="inline-flex items-center rounded-full border border-tour-navy-900 px-5 py-2.5 font-heading tracking-[0.2em] text-xs uppercase hover:bg-tour-navy-900 hover:text-white transition"
             >
-              View All News →
+              View All News
             </Link>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <div className="lg:col-span-2">
-              {featuredNews && <NewsCard article={featuredNews} featured />}
+
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+            <div className="xl:col-span-2 space-y-8">
+              {featuredNews && (
+                <div className="w-full">
+                  <NewsCard article={featuredNews} featured />
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {recentNews.map((article) => (
+                  <NewsCard key={article.id} article={article} />
+                ))}
+              </div>
             </div>
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-              {recentNews.map((article) => (
-                <NewsCard key={article.id} article={article} />
-              ))}
-            </div>
+
+            <aside className="card-elevated px-6 py-8 flex flex-col gap-6 bg-white/90">
+              <div className="space-y-3">
+                <span className="headline-pill bg-tour-cloud text-tour-navy-900 text-[0.6rem]">
+                  News Desk
+                </span>
+                <h3 className="font-heading text-lg tracking-[0.18em] text-tour-navy-900">
+                  Top Stories & Updates
+                </h3>
+              </div>
+
+              <div className="space-y-4">
+                {newsroomUpdates.map((article) => (
+                  <Link
+                    key={article.id}
+                    href={`/news/${article.id}`}
+                    className="block rounded-2xl border border-tour-cloud/80 px-4 py-3 hover:border-tour-navy-900 transition"
+                  >
+                    <p className="text-sm font-semibold text-tour-navy-900 line-clamp-2">
+                      {article.title}
+                    </p>
+                    <p className="text-xs uppercase tracking-[0.16em] text-tour-muted/80 mt-2">
+                      {new Date(article.publishDate).toLocaleDateString()}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+
+              <Link
+                href="/news"
+                className="inline-flex items-center justify-center rounded-full bg-tour-navy-900 px-6 py-3 font-heading tracking-[0.2em] text-xs uppercase text-white hover:bg-tour-green transition"
+              >
+                Browse Newsroom
+              </Link>
+            </aside>
           </div>
         </div>
       </section>
 
       {/* Video Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mb-8">Video Highlights</h2>
+      <section className="section-shell bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="section-title">
+            <span className="headline-pill">Watch & Listen</span>
+            <h2>Video Highlights</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredVideos.map((video) => (
               <div key={video.id} className="group relative h-64 rounded-lg overflow-hidden">
@@ -244,15 +309,18 @@ export default function Home() {
       </section>
 
       {/* Shop Preview */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540]">Shop</h2>
+      <section className="section-shell bg-tour-cloud">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
+            <div className="section-title">
+              <span className="headline-pill">Tournament Shop</span>
+              <h2>Featured Gear</h2>
+            </div>
             <Link
               href="/shop"
-              className="text-[#00a859] font-semibold hover:underline"
+              className="inline-flex items-center rounded-full border border-tour-navy-900 px-5 py-2.5 font-heading tracking-[0.2em] text-xs uppercase hover:bg-tour-navy-900 hover:text-white transition"
             >
-              View All Products →
+              View All Products
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -264,12 +332,12 @@ export default function Home() {
       </section>
 
       {/* Partners */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mb-8 text-center">
+      <section className="section-shell bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-heading text-center tracking-[0.2em] text-sm uppercase text-tour-muted mb-10">
             Official Partners
           </h2>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-75">
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
             {partners.map((partner) => (
               <div
                 key={partner.id}
@@ -288,25 +356,26 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#0a2540] text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Join Us for India's Premier Golf Championship
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Experience world-class golf at Emaar Boulder Hills. Register as a player or secure your
-            spectator tickets today.
-          </p>
+      <section className="section-shell bg-tour-navy-900 text-white">
+        <div className="max-w-6xl mx-auto px-6 text-center space-y-8">
+          <div className="space-y-4">
+            <span className="headline-pill bg-white/10 text-white">Tournament Access</span>
+            <h2 className="text-white">Join India&apos;s Premier Championship</h2>
+            <p className="text-white/70 text-lg leading-8 max-w-2xl mx-auto">
+              Experience world-class golf at Emaar Boulder Hills. Register as a professional player
+              or secure your hospitality passes today.
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/register"
-              className="bg-[#00a859] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#008a4a] transition"
+              className="inline-flex items-center rounded-full bg-tour-green px-8 py-3 font-heading tracking-[0.2em] text-xs uppercase text-white hover:bg-[#02c56f] transition"
             >
               Register as Player
             </Link>
             <Link
               href="/tickets"
-              className="bg-white text-[#0a2540] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              className="inline-flex items-center rounded-full bg-white/10 px-8 py-3 font-heading tracking-[0.2em] text-xs uppercase text-white hover:bg-white/20 transition"
             >
               Buy Tickets
             </Link>

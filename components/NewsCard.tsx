@@ -12,22 +12,26 @@ export default function NewsCard({ article, featured = false }: NewsCardProps) {
     return (
       <Link
         href={`/news/${article.id}`}
-        className="group relative h-96 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+        className="group relative min-h-[500px] overflow-hidden rounded-3xl shadow-2xl transition"
       >
         <Image
           src={article.heroImage}
           alt={article.title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-          <span className="text-sm font-semibold text-[#00a859]">{article.category}</span>
-          <h2 className="text-2xl font-bold mt-2 group-hover:text-[#00a859] transition">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 text-white space-y-4">
+          <span className="inline-block headline-pill bg-white/15 text-white backdrop-blur-sm">
+            {article.category}
+          </span>
+          <h2 className="font-heading text-2xl md:text-3xl tracking-[0.2em] text-white group-hover:text-tour-green transition leading-tight line-clamp-3">
             {article.title}
           </h2>
-          <p className="text-sm mt-2 text-gray-200">{article.excerpt}</p>
-          <p className="text-xs mt-4 text-gray-300">
+          <p className="text-sm md:text-base text-white/90 leading-relaxed line-clamp-2">
+            {article.excerpt}
+          </p>
+          <p className="text-xs uppercase tracking-[0.2em] text-white/70">
             {new Date(article.publishDate).toLocaleDateString()}
           </p>
         </div>
@@ -38,23 +42,23 @@ export default function NewsCard({ article, featured = false }: NewsCardProps) {
   return (
     <Link
       href={`/news/${article.id}`}
-      className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition"
+      className="group card-elevated overflow-hidden transition"
     >
       <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={article.heroImage}
           alt={article.title}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-300"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <div className="p-4">
-        <span className="text-xs font-semibold text-[#00a859]">{article.category}</span>
-        <h3 className="text-lg font-bold text-[#0a2540] mt-2 group-hover:text-[#00a859] transition line-clamp-2">
+      <div className="p-6 space-y-3">
+        <span className="headline-pill bg-tour-cloud text-tour-navy-900 text-[0.6rem]">{article.category}</span>
+        <h3 className="font-heading text-base tracking-[0.16em] text-tour-navy-900 group-hover:text-tour-green transition line-clamp-2">
           {article.title}
         </h3>
-        <p className="text-sm text-gray-600 mt-2 line-clamp-2">{article.excerpt}</p>
-        <p className="text-xs text-gray-500 mt-3">
+        <p className="text-sm text-tour-muted line-clamp-2">{article.excerpt}</p>
+        <p className="text-xs uppercase tracking-[0.18em] text-tour-muted/80">
           {new Date(article.publishDate).toLocaleDateString()}
         </p>
       </div>

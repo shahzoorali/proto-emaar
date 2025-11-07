@@ -10,39 +10,38 @@ export default function PlayerCard({ player }: PlayerCardProps) {
   return (
     <Link
       href={`/players/${player.id}`}
-      className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
+      className="group card-elevated overflow-hidden transition-all duration-300 hover:-translate-y-1"
     >
       <div className="relative h-64 w-full overflow-hidden">
         <Image
           src={player.imageUrl}
           alt={player.name}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-300"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute top-2 right-2 bg-[#0a2540] text-white px-3 py-1 rounded-full text-sm font-semibold">
+        <div className="absolute top-4 right-4 rounded-full bg-tour-navy-900/90 px-4 py-1 font-heading text-xs tracking-[0.24em] text-white">
           HCP {player.handicap}
         </div>
       </div>
-      <div className="p-4">
-        <h3 className="text-xl font-bold text-[#0a2540] group-hover:text-[#00a859] transition">
+      <div className="p-6 space-y-3">
+        <h3 className="font-heading text-lg tracking-[0.2em] text-tour-navy-900 group-hover:text-tour-green transition">
           {player.name}
         </h3>
-        <p className="text-sm text-gray-600 mt-1">{player.hometown}</p>
-        <p className="text-xs text-gray-500 mt-1 flex items-center gap-1">
-          <span>{player.countryFlag}</span>
+        <p className="text-sm text-tour-muted">{player.hometown}</p>
+        <p className="text-xs text-tour-muted flex items-center gap-2 uppercase tracking-[0.24em]">
+          <span aria-hidden>{player.countryFlag}</span>
           <span>
             {player.country} ({player.countryCode})
           </span>
         </p>
-        <p className="text-xs text-gray-500 mt-1">{player.club}</p>
-        <div className="mt-3 flex gap-4 text-sm">
-          <div>
-            <span className="text-gray-500">Avg Score:</span>
-            <span className="font-semibold ml-1">{player.stats.scoringAvg}</span>
+        <div className="flex items-center gap-6 text-sm text-tour-muted/80">
+          <div className="flex flex-col">
+            <span className="uppercase tracking-[0.2em] text-xs">Avg Score</span>
+            <span className="text-tour-navy-900 font-semibold">{player.stats.scoringAvg}</span>
           </div>
-          <div>
-            <span className="text-gray-500">Driving:</span>
-            <span className="font-semibold ml-1">{player.stats.drivingDist} yds</span>
+          <div className="flex flex-col">
+            <span className="uppercase tracking-[0.2em] text-xs">Driving</span>
+            <span className="text-tour-navy-900 font-semibold">{player.stats.drivingDist} yds</span>
           </div>
         </div>
       </div>

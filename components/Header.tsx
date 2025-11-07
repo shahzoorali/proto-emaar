@@ -2,128 +2,93 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, ShoppingCart, User } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0a2540] text-white sticky top-0 z-50 shadow-lg">
-      {/* Top Bar */}
-      <div className="bg-[#0d1f33] py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <span>📧 info@hyderabadopen.com</span>
-            <span>📞 +91 40 1234 5678</span>
+    <header className="sticky top-0 z-50 backdrop-blur bg-tour-navy-900/95 text-white shadow-2xl">
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 text-xs uppercase tracking-[0.24em] font-semibold">
+          <div className="flex flex-wrap items-center gap-6 text-white/70">
+            <span>info@hyderabadopen.com</span>
+            <span>+91 40 1234 5678</span>
           </div>
-          <div className="flex items-center gap-4">
-            <Link href="/register" className="hover:text-[#00a859] transition">
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/register" className="hover:text-[#ffb81c] transition">
               Register
             </Link>
-            <Link href="/tickets" className="hover:text-[#00a859] transition">
+            <Link href="/tickets" className="hover:text-[#ffb81c] transition">
               Tickets
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="text-2xl font-bold hover:text-[#00a859] transition">
+      <nav className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between gap-8">
+          <Link href="/" className="font-heading text-2xl md:text-3xl tracking-[0.2em] text-white hover:text-[#ffb81c] transition">
             Hyderabad Open 2026
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="hover:text-[#00a859] transition font-medium">
-              Home
-            </Link>
-            <Link href="/leaderboard" className="hover:text-[#00a859] transition font-medium">
-              Leaderboard
-            </Link>
-            <Link href="/schedule" className="hover:text-[#00a859] transition font-medium">
-              Schedule
-            </Link>
-            <Link href="/players" className="hover:text-[#00a859] transition font-medium">
-              Players
-            </Link>
-            <Link href="/course" className="hover:text-[#00a859] transition font-medium">
-              Course
-            </Link>
-            <Link href="/news" className="hover:text-[#00a859] transition font-medium">
-              News
-            </Link>
-            <Link href="/shop" className="hover:text-[#00a859] transition font-medium">
-              Shop
-            </Link>
-            <Link href="/shop" className="p-2 hover:bg-[#0d1f33] rounded transition">
-              <ShoppingCart className="w-5 h-5" />
+          <div className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-[0.2em] font-semibold">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/leaderboard", label: "Leaderboard" },
+              { href: "/schedule", label: "Schedule" },
+              { href: "/players", label: "Players" },
+              { href: "/course", label: "Course" },
+              { href: "/news", label: "News" },
+              { href: "/shop", label: "Shop" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="relative hover:text-[#ffb81c] transition"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-3 py-2 hover:border-[#ffb81c] hover:text-[#ffb81c] transition"
+            >
+              <ShoppingCart className="h-4 w-4" />
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-md border border-white/20"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2">
-            <Link
-              href="/"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/leaderboard"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Leaderboard
-            </Link>
-            <Link
-              href="/schedule"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Schedule
-            </Link>
-            <Link
-              href="/players"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Players
-            </Link>
-            <Link
-              href="/course"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Course
-            </Link>
-            <Link
-              href="/news"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              News
-            </Link>
-            <Link
-              href="/shop"
-              className="block py-2 hover:text-[#00a859] transition"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Shop
-            </Link>
+          <div className="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm uppercase tracking-[0.18em]">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/leaderboard", label: "Leaderboard" },
+              { href: "/schedule", label: "Schedule" },
+              { href: "/players", label: "Players" },
+              { href: "/course", label: "Course" },
+              { href: "/news", label: "News" },
+              { href: "/shop", label: "Shop" },
+              { href: "/register", label: "Register" },
+              { href: "/tickets", label: "Tickets" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block rounded-full bg-white/5 px-4 py-2 text-white hover:bg-white/10 transition"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         )}
       </nav>

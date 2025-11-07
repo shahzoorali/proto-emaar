@@ -1,33 +1,118 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --pga-navy: #0a2540;
-  --pga-green: #00a859;
-  --pga-gold: #ffb81c;
-  --pga-gray: #6b7280;
-  --pga-light-gray: #f3f4f6;
+  --color-tour-navy-900: #0a2540;
+  --color-tour-navy-800: #112c4c;
+  --color-tour-navy-700: #16365a;
+  --color-tour-green: #00a859;
+  --color-tour-gold: #ffb81c;
+  --color-tour-cloud: #f5f6f8;
+  --color-tour-surface: #f8fafc;
+  --color-tour-text: #132238;
+  --color-tour-muted: #4b5563;
+  --shadow-elevated: 0 24px 48px rgba(10, 37, 64, 0.18);
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 1.75rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 4.5rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-pga-navy: var(--pga-navy);
-  --color-pga-green: var(--pga-green);
-  --color-pga-gold: var(--pga-gold);
-  --color-pga-gray: var(--pga-gray);
-  --color-pga-light-gray: var(--pga-light-gray);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-tour-navy-900: var(--color-tour-navy-900);
+  --color-tour-navy-800: var(--color-tour-navy-800);
+  --color-tour-navy-700: var(--color-tour-navy-700);
+  --color-tour-green: var(--color-tour-green);
+  --color-tour-gold: var(--color-tour-gold);
+  --color-tour-cloud: var(--color-tour-cloud);
+  --color-tour-surface: var(--color-tour-surface);
+  --color-tour-text: var(--color-tour-text);
+  --color-tour-muted: var(--color-tour-muted);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-tour-surface);
+  color: var(--color-tour-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-tour-navy-900);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.section-shell {
+  padding-top: clamp(var(--space-xl), 8vw, var(--space-3xl));
+  padding-bottom: clamp(var(--space-xl), 8vw, var(--space-3xl));
+}
+
+.section-shell .section-title {
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.headline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(17, 44, 76, 0.12);
+  color: var(--color-tour-navy-900);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.card-elevated {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-elevated);
+}
+
+.grid-gap-lg {
+  display: grid;
+  gap: var(--space-lg);
 }

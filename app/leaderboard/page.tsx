@@ -13,13 +13,13 @@ export default function LeaderboardPage() {
   const roundLabel = `R${leaderboard.round}`;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 space-y-8">
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
-          <div className="bg-[#0a2540] text-white px-6 py-8 md:px-10 md:py-10">
-            <div className="flex flex-col xl:flex-row gap-10">
+    <div className="min-h-screen bg-tour-cloud py-16">
+      <div className="max-w-7xl mx-auto px-6 space-y-12">
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-tour-cloud/60">
+          <div className="bg-tour-navy-900 text-white px-6 py-10 md:px-12 md:py-12">
+            <div className="flex flex-col xl:flex-row gap-12">
               <div className="flex flex-1 gap-6">
-                <div className="relative h-24 w-24 md:h-28 md:w-28 bg-[#112c4c] rounded-2xl overflow-hidden flex-shrink-0">
+                <div className="relative h-24 w-24 md:h-28 md:w-28 bg-tour-navy-800 rounded-2xl overflow-hidden flex-shrink-0">
                   <Image
                     src="/logo-hyderabad-open.svg"
                     alt="Hyderabad Open 2026"

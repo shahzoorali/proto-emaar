@@ -136,7 +136,7 @@ export default function LeaderboardTable({ leaderboard }: LeaderboardTableProps)
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
-          <thead className="bg-[#f5f6f8] text-[#0a2540] border-b border-gray-200 uppercase text-xs tracking-wider">
+          <thead className="bg-tour-cloud text-tour-navy-900 border-b border-tour-cloud/80 uppercase text-xs tracking-wider">
             <tr>
               <th className="px-4 py-3 text-left">Pos</th>
               <th className="px-4 py-3 text-left">Player</th>
@@ -159,9 +159,13 @@ export default function LeaderboardTable({ leaderboard }: LeaderboardTableProps)
               return (
                 <tr
                   key={entry.playerId}
-                  className={`border-b border-gray-200 transition ${
-                    isLeader ? "bg-[#eef9f3]" : index % 2 === 0 ? "bg-white" : "bg-[#fafafa]"
-                  } hover:bg-[#e9f5ff]`}
+                  className={`border-b border-tour-cloud transition ${
+                    isLeader
+                      ? "bg-[#f0fff4]"
+                      : index % 2 === 0
+                        ? "bg-white"
+                        : "bg-tour-cloud"
+                  } hover:bg-[#e0f0ff]`}
                 >
                   <td className="px-4 py-3 font-semibold text-[#0a2540]">{formatPosition(entry, index)}</td>
                   <td className="px-4 py-3">
@@ -188,13 +192,15 @@ export default function LeaderboardTable({ leaderboard }: LeaderboardTableProps)
                       </div>
                     </div>
                   </td>
-                  <td className={`px-3 py-3 text-center font-bold ${
-                    toPar !== undefined && toPar < 0
-                      ? "text-[#008a4a]"
-                      : toPar !== undefined && toPar > 0
-                        ? "text-red-600"
-                        : "text-[#0a2540]"
-                  }`}>
+                  <td
+                    className={`px-3 py-3 text-center font-bold ${
+                      toPar !== undefined && toPar < 0
+                        ? "text-[#047857]"
+                        : toPar !== undefined && toPar > 0
+                          ? "text-[#b91c1c]"
+                          : "text-tour-navy-900"
+                    }`}
+                  >
                     {formatScoreToPar(toPar)}
                   </td>
                   <td className="px-3 py-3 text-center font-semibold text-[#0a2540]">
