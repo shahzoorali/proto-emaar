@@ -118,7 +118,7 @@ export const players: Player[] = [
       { tournament: "NCR Championship 2025", position: 6, score: -5 },
       { tournament: "Delhi Classic 2025", position: 10, score: -3 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"),
   },
   {
     id: "5",
@@ -141,7 +141,7 @@ export const players: Player[] = [
       { tournament: "Pune Open 2025", position: 7, score: -4 },
       { tournament: "Maharashtra Masters", position: 12, score: -2 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1539571696357-5a69c17a67c6"),
   },
   {
     id: "6",
@@ -164,7 +164,7 @@ export const players: Player[] = [
       { tournament: "Gujarat Open 2025", position: 9, score: -3 },
       { tournament: "Surat Championship", position: 15, score: -1 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1500648767791-00dcc994a43e"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1463453091185-61582044d556"),
   },
   {
     id: "7",
@@ -187,7 +187,7 @@ export const players: Player[] = [
       { tournament: "Hyderabad Open 2025", position: 11, score: -2 },
       { tournament: "Telangana Classic", position: 18, score: 0 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1492562080023-ab3db95bfbce"),
   },
   {
     id: "8",
@@ -210,7 +210,7 @@ export const players: Player[] = [
       { tournament: "Rajasthan Open 2025", position: 14, score: -1 },
       { tournament: "Jaipur Championship", position: 20, score: 1 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"),
   },
   {
     id: "9",
@@ -233,7 +233,7 @@ export const players: Player[] = [
       { tournament: "Kolkata Open 2025", position: 16, score: 0 },
       { tournament: "Eastern India Classic", position: 22, score: 2 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1500648767791-00dcc994a43e"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1531891437562-4301cf35b7e4"),
   },
   {
     id: "10",
@@ -256,7 +256,7 @@ export const players: Player[] = [
       { tournament: "Chennai Open 2025", position: 19, score: 1 },
       { tournament: "Tamil Nadu Masters", position: 25, score: 3 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1560250097-0b93528c311a"),
   },
   {
     id: "11",
@@ -279,7 +279,7 @@ export const players: Player[] = [
       { tournament: "Kerala Open 2025", position: 21, score: 2 },
       { tournament: "Cochin Championship", position: 28, score: 4 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1552058544-f2b08422138a"),
   },
   {
     id: "12",
@@ -302,7 +302,7 @@ export const players: Player[] = [
       { tournament: "Punjab Open 2025", position: 24, score: 3 },
       { tournament: "Chandigarh Classic", position: 30, score: 5 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1500648767791-00dcc994a43e"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1557862921-37829c790f19"),
   },
   {
     id: "13",
@@ -325,7 +325,7 @@ export const players: Player[] = [
       { tournament: "Andhra Open 2025", position: 26, score: 4 },
       { tournament: "Vizag Championship", position: 32, score: 6 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1542190891-2093d38760f2"),
   },
   {
     id: "14",
@@ -348,7 +348,7 @@ export const players: Player[] = [
       { tournament: "Kerala Open 2025", position: 28, score: 5 },
       { tournament: "South India Classic", position: 35, score: 7 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1438761681033-6461ffad8d80"),
   },
   {
     id: "15",
@@ -371,7 +371,7 @@ export const players: Player[] = [
       { tournament: "Punjab Open 2025", position: 30, score: 6 },
       { tournament: "Ludhiana Championship", position: 38, score: 8 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1500648767791-00dcc994a43e"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1566492031773-4f4e44671857"),
   },
   {
     id: "16",
@@ -394,7 +394,7 @@ export const players: Player[] = [
       { tournament: "MP Open 2025", position: 32, score: 7 },
       { tournament: "Indore Classic", position: 40, score: 9 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1545167622-3a6ac756afa4"),
   },
   {
     id: "17",
@@ -417,7 +417,7 @@ export const players: Player[] = [
       { tournament: "MP Open 2025", position: 34, score: 8 },
       { tournament: "Bhopal Championship", position: 42, score: 10 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1599566150163-29194dcaad36"),
   },
   {
     id: "18",
@@ -440,7 +440,7 @@ export const players: Player[] = [
       { tournament: "Uttarakhand Open 2025", position: 36, score: 9 },
       { tournament: "Dehradun Classic", position: 44, score: 11 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1500648767791-00dcc994a43e"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1568602471122-7832951cc4c5"),
   },
   {
     id: "19",
@@ -463,7 +463,7 @@ export const players: Player[] = [
       { tournament: "Maharashtra Masters", position: 38, score: 10 },
       { tournament: "Nagpur Open", position: 46, score: 12 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1504257432389-52343af06ae3"),
   },
   {
     id: "20",
@@ -486,7 +486,7 @@ export const players: Player[] = [
       { tournament: "Goa Open 2025", position: 17, score: 1 },
       { tournament: "Western India Classic", position: 23, score: 3 },
     ],
-    imageUrl: playerImage("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"),
+    imageUrl: playerImage("https://images.unsplash.com/photo-1522556189639-b150ed9c4330"),
   },
 ];
 
