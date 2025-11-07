@@ -9,6 +9,7 @@ import {
   Droplet,
   Umbrella,
   Sun,
+  Globe,
 } from "lucide-react";
 import { leaderboard } from "@/data/leaderboard";
 import { players } from "@/data/players";
@@ -19,13 +20,14 @@ import LeaderboardTable from "@/components/LeaderboardTable";
 import PlayerCard from "@/components/PlayerCard";
 import NewsCard from "@/components/NewsCard";
 import ProductCard from "@/components/ProductCard";
+import RolexClockWidget from "@/components/RolexClockWidget";
 import { products } from "@/data/products";
 
 const currentConditions = {
-  temperature: "87°F",
+  temperature: "31°C",
   condition: "Mostly Sunny",
-  wind: "11 MPH WNW",
-  windDetail: "Gusts up to 15 MPH",
+  wind: "18 km/h WNW",
+  windDetail: "Gusts up to 24 km/h",
   humidity: "49%",
   precipitation: "1%",
   course: "Emaar Boulder Hills Golf Club",
@@ -54,7 +56,7 @@ export default function Home() {
             className="absolute top-1/2 left-1/2 w-[130%] h-[130%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f4d688]/80 via-[#fdf1c2]/50 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 h-full flex items-center">
           <div className="text-white max-w-2xl space-y-6">
             <h1 className="font-heading text-5xl md:text-6xl tracking-[0.12em] text-white drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)] leading-tight">
@@ -100,62 +102,72 @@ export default function Home() {
       {/* Current Conditions */}
       <section className="section-shell bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="card-elevated bg-tour-navy-900 text-white overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-3">
-              <div className="lg:col-span-2 p-8 md:p-10 space-y-6">
-                <div className="flex items-center gap-3">
-                  <span className="headline-pill bg-white/10 text-white">Current Conditions</span>
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/60">
-                    {currentConditions.updated}
-                  </span>
-                </div>
+          <div className="rounded-3xl p-[1px] bg-gradient-to-r from-[#f4d35e] via-[#fdd670] to-[#f4d35e] shadow-lg">
+            <div className="rounded-[calc(1.5rem-1px)] bg-white px-6 md:px-10 py-8 flex flex-col gap-8 lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-5">
+              <div className="flex items-center gap-3">
+                <span className="headline-pill bg-tour-cloud text-tour-navy-900">
+                  Current Conditions
+                </span>
+                <span className="text-xs uppercase tracking-[0.2em] text-tour-muted/70">
+                  {currentConditions.updated}
+                </span>
+              </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 text-sm text-white/85">
-                  <div className="space-y-2">
-                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Wind</p>
-                    <div className="flex items-center gap-3">
-                      <Wind className="h-5 w-5 text-tour-green" />
-                      <div>
-                        <p className="font-semibold text-white">{currentConditions.wind}</p>
-                        <p className="text-white/70 text-xs">{currentConditions.windDetail}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Humidity</p>
-                    <div className="flex items-center gap-3">
-                      <Droplet className="h-5 w-5 text-tour-green" />
-                      <p className="font-semibold text-white">{currentConditions.humidity}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Precipitation</p>
-                    <div className="flex items-center gap-3">
-                      <Umbrella className="h-5 w-5 text-tour-green" />
-                      <p className="font-semibold text-white">{currentConditions.precipitation}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="uppercase tracking-[0.2em] text-xs text-white/60">Course</p>
-                    <p className="font-semibold text-white">{currentConditions.course}</p>
-                  </div>
+              <div className="flex flex-wrap items-center gap-5 text-tour-text">
+                <div className="flex items-center gap-2 text-sm font-semibold text-tour-text">
+                  <Wind className="h-4 w-4 text-tour-green" />
+                  <span>{currentConditions.wind}</span>
                 </div>
-
-                <div className="flex items-center gap-3 text-white/80 text-sm">
-                  <MapPin className="h-4 w-4 text-tour-green" />
-                  <span>{currentConditions.location}</span>
+                <div className="h-4 w-px bg-tour-cloud" />
+                <div className="flex items-center gap-2 text-sm font-semibold text-tour-text">
+                  <Droplet className="h-4 w-4 text-tour-green" />
+                  <span>{currentConditions.humidity}</span>
+                </div>
+                <div className="h-4 w-px bg-tour-cloud" />
+                <div className="flex items-center gap-2 text-sm font-semibold text-tour-text">
+                  <Umbrella className="h-4 w-4 text-tour-green" />
+                  <span>{currentConditions.precipitation}</span>
+                </div>
+                <div className="h-4 w-px bg-tour-cloud" />
+                <div className="flex items-center gap-2 text-sm font-semibold text-tour-text">
+                  <Globe className="h-4 w-4 text-tour-green" />
+                  <span>{currentConditions.course}</span>
                 </div>
               </div>
 
-              <div className="bg-tour-navy-800/70 backdrop-blur-sm px-10 py-12 flex flex-col items-center justify-center gap-4">
-                <Sun className="h-14 w-14 text-tour-gold" />
-                <p className="text-5xl font-heading tracking-[0.12em] text-white">
+              <div className="flex items-center gap-3 text-tour-muted/90 text-sm">
+                <MapPin className="h-4 w-4 text-tour-green" />
+                <span>{currentConditions.location}</span>
+              </div>
+            </div>
+
+            <div className="hidden lg:block h-20 w-px bg-tour-cloud/80" />
+
+            <div className="flex items-center gap-4 lg:px-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FAE100]">
+                <Sun className="h-8 w-8 text-tour-navy-900" />
+              </div>
+              <div>
+                <p className="text-4xl font-heading tracking-[0.12em] text-tour-navy-900">
                   {currentConditions.temperature}
                 </p>
-                <p className="uppercase tracking-[0.2em] text-sm text-white/70">
+                <p className="uppercase tracking-[0.2em] text-xs text-tour-muted mt-1">
                   {currentConditions.condition}
                 </p>
               </div>
+            </div>
+
+            <div className="hidden lg:block h-20 w-px bg-tour-cloud/80" />
+
+            <div className="flex-1 w-full lg:max-w-sm">
+              <RolexClockWidget
+                cityName="Hyderabad"
+                cityTimeZone="Asia/Kolkata"
+                localLabel="Your Time"
+                variant="compact"
+              />
+            </div>
             </div>
           </div>
         </div>
